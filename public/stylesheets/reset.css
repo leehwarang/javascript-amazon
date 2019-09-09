@@ -3,6 +3,10 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 8px;
+}
+
 body,
 ul,
 ol,

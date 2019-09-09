@@ -3,15 +3,15 @@
 }
 
 .card-wrap {
-  max-width: 800px;
+  max-width: 100rem;
   width: 100%;
-  min-height: 300px;
+  min-height: 50rem;
   margin: 0 auto;
-  margin-top: 250px;
+  margin-top: 20rem;
 }
 
 .card-wrap .navigation {
-  margin-bottom: 40px;
+  margin-bottom: 8rem;
 }
 
 .card-wrap .navigation-list {
@@ -22,11 +22,12 @@
   flex: 1;
   display: flex;
   align-items: center;
-  height: 60px;
+  height: 7rem;
   justify-content: center;
   text-align: center;
   color: #fff;
-  padding: 5px 30px;
+  font-size: 2rem;
+  padding: 1.5rem 3.5rem;
   cursor: pointer;
 }
 
@@ -61,12 +62,13 @@
 
 .carousel-item .info-text h3 {
   font-weight: normal;
-  font-size: 24px;
-  margin-bottom: 20px;
+  font-size: 3.5rem;
+  margin-bottom: 4rem;
 }
 
 .carousel-item .info-text ul {
-  padding-left: 16px;
+  padding-left: 2rem;
+  font-size: 1.8rem;
 }
 
 .carousel-item .info-text li {
@@ -76,18 +78,18 @@
 }
 
 .btn-common {
-  width: 25px;
-  height: 25px;
+  width: 4rem;
+  height: 4rem;
   cursor: pointer;
   position: absolute;
   top: 50%;
   tranform: translateY(-50%);
 }
 .btn-prev {
-  left: -40px;
+  left: -5rem;
 }
 .btn-next {
-  right: -40px;
+  right: -5rem;
 }
 
 .highlight-blue {
@@ -95,51 +97,51 @@
 }
 
 .header {
+  width: 100%;
   background-color: #232f3e;
-  height: 100px;
+  height: 11rem;
   display: flex;
   justify-content: space-between;
-  padding-top: 14px;
+  padding-top: 2rem;
 }
 
 .header-item {
   display: inline-block;
-  position: static;
+  height: 6rem;
+}
+
+.company-logo {
+  width: 32rem;
+  margin-right: 2rem;
+}
+
+.service-info {
+  width: 65rem;
+  height: 6rem;
 }
 
 .search-box-container {
   border: none;
-  border-radius: 8px;
+  display: flex;
   width: 100%;
-  height: 35px;
-  margin-right: 25px;
+  height: 4rem;
+  margin-top: 1rem;
   position: relative;
-  top: 2px;
-}
-
-.service-info {
-  width: 400px;
-  min-width: 400px;
 }
 
 .search-form {
-  width: calc(100% - 45px - 55px);
+  width: 100%;
   height: 100%;
-  max-height: 100%;
-}
-
-.company-logo {
-  width: 150px;
-  min-width: 150px;
-  margin-right: 25px;
+  border-radius: 0.2rem;
+  position: static;
 }
 
 .select-classification,
 .btn-search {
-  width: 45px;
+  width: 5rem;
   height: 100%;
-  max-height: 100%;
   vertical-align: middle;
+  border-radius: 0.2rem;
 }
 
 .btn-search {
@@ -151,15 +153,16 @@
 .service-info img,
 .btn-search img {
   width: 100%;
-  height: 60%;
+  height: 100%;
 }
 
 .modal-autocomplete,
 .modal-recent {
   background-color: white;
-  width: calc(100% - 45px - 55px);
-  position: relative;
-  left: 50px;
+  width: calc(100% - 10rem);
+  position: absolute;
+  top: 4rem;
+  left: 5rem;
 }
 
 .modal-autocomplete,
@@ -169,7 +172,8 @@
 
 .modal-autocomplete li,
 .modal-recent li {
-  height: 30px;
-  line-height: 30px;
+  height: 4rem;
+  line-height: 4rem;
+  font-size: 1.6rem;
   font-weight: bold;
 }
