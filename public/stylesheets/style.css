@@ -112,11 +112,13 @@
 
 .company-logo {
   width: 32rem;
+  min-width: 90px;
   margin-right: 2rem;
 }
 
 .service-info {
   width: 65rem;
+  min-width: 150px;
   height: 6rem;
 }
 
@@ -168,6 +170,7 @@
 .modal-autocomplete,
 .modal-recent {
   border: 1px solid #eee;
+  z-index: 1;
 }
 
 .modal-autocomplete li,
