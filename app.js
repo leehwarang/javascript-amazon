@@ -2,8 +2,10 @@ const express = require("express");
 const path = require("path");
 const logger = require("morgan");
 const indexRouter = require("./routes/index");
-
+require("dotenv").config();
 const port = process.env.PORT || 3000;
+const mode = process.env.NODE_ENV;
+
 const app = express();
 
 // view engine setup

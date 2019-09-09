@@ -2,6 +2,7 @@ import Controller from "./controller.js";
 import SearchView from "./searchView.js";
 import AutoCompleteView from "./autoCompleteView.js";
 import RecentSearchView from "./recentSearchView.js";
+import config from "./config.js";
 
 export default function loadSearchUI() {
   const searchView = new SearchView([".search-form", ".btn-search"]);
@@ -11,7 +12,8 @@ export default function loadSearchUI() {
   const controller = new Controller({
     searchView,
     autoCompleteView,
-    recentSearchView
+    recentSearchView,
+    config
   });
 
   window.addEventListener("DOMContentLoaded", () => {

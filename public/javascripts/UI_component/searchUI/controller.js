@@ -1,9 +1,10 @@
 class Controller {
-  constructor({ searchView, autoCompleteView, recentSearchView }) {
+  constructor({ searchView, autoCompleteView, recentSearchView, config }) {
     this.data;
     this.searchView = searchView;
     this.autoCompleteView = autoCompleteView;
     this.recentSearchView = recentSearchView;
+    this.config = config;
 
     this.currentMode;
     this.modeType = {
@@ -12,9 +13,6 @@ class Controller {
       pending: "pending",
       entering: "entering",
       completing: "completing"
-    };
-    this.config = {
-      baseUrl: `https://michelle-amazon.herokuapp.com/autocomplete?suggestion=`
     };
   }
 
