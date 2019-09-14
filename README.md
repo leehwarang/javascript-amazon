@@ -2,7 +2,7 @@
 
 > 🛒 아마존 메인 페이지의 캐러셀 슬라이더 UI과 검색 자동 완성 기능을 순수 자바스크립트로 구현하기
 
-### Overview
+## Overview
 
 - [데모 링크](https://michelle-amazon.herokuapp.com/)
 
@@ -11,11 +11,11 @@
 
 ---
 
-### 1. 캐러셀 슬라이더 UI
+## 1. 캐러셀 슬라이더 UI
 
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/vKMQ-GYcL6Y" frameborder="0" allow="accel erometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[![Amazon Clone - 캐러셀 슬라이더 UI](https://video-to-markdown.netlify.com/.netlify/functions/image?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DvKMQ-GYcL6Y)](https://www.youtube.com/watch?v=vKMQ-GYcL6Y "Amazon Clone - 캐러셀 슬라이더 UI")
 
-#### 1-1. 기능
+### 1-1. 기능
 
 - 메인 기능
 
@@ -27,7 +27,7 @@
   - 데이터 비동기 요청 후, template을 동적으로 생성. 데이터의 갯수가 변하더라도 동일한 UI
   - 사용자가 마우스를 빠르게 클릭하더라도 정상적으로 동작
 
-#### 1-2. 설계 및 구현
+### 1-2. 설계 및 구현
 
 - 각 역할별로 클래스(모듈) 분리
 
@@ -44,7 +44,7 @@
 
 * [관련된 구현 로직](https://leehwarang.github.io/) // 작성중
 
-#### 1-3. 구현시 가장 고민했던 부분
+### 1-3. 구현시 가장 고민했던 부분
 
 - Caroseul와 Pagination의 의존 관계를 낮추기 위한 방법
 
@@ -54,11 +54,11 @@
 
 ---
 
-### 2. 검색 자동 완성 기능
+## 2. 검색 자동 완성 기능
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/IhJ-2Nh23vI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[![Amazon Clone - 검색 자동 완성](https://video-to-markdown.netlify.com/.netlify/functions/image?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DIhJ-2Nh23vI)](https://www.youtube.com/watch?v=IhJ-2Nh23vI "Amazon Clone - 검색 자동 완성")
 
-#### 2-1. 기능
+### 2-1. 기능
 
 - 메인 기능
 
@@ -70,7 +70,7 @@
 
   - 디바운스(debounce) 기능으로 1.2초 동안 사용자 입력이 없을 시에만 API 요청
 
-#### 2-2. 설계 및 구현
+### 2-2. 설계 및 구현
 
 - 설계 이미지 추가
 - UI 에서 어떤 부분이 각 클래스 컴포넌트를 담당하는지 매칭시키는 이미지 추가
@@ -89,7 +89,7 @@
 
 * [관련된 구현 로직](https://leehwarang.github.io/) // 작성중
 
-#### 2-3. 구현시 가장 고민했던 부분
+### 2-3. 구현시 가장 고민했던 부분
 
 - 이벤트에 따른 상태를 관리하는 방법
 
@@ -107,7 +107,7 @@
 
 ---
 
-### 3. 느낀점
+## 3. 느낀점
 
 - **순수 자바스크립트로 웹 사이트를 만들어 보는 값진 경험**
 
