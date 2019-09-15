@@ -59,7 +59,7 @@
 
 ## 2. 검색 자동 완성 기능
 
-![검색 자동 완성](https://media.giphy.com/media/fY0FbqOzMTkupZWloQ/giphy.gif)
+![검색 자동 완성](https://media.giphy.com/media/efOEuPNwCekQTP6tcd/giphy.gif)
 
 ### 2-1. 기능
 
