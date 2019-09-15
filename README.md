@@ -34,24 +34,23 @@
 
 - 각 역할별로 클래스(모듈) 분리
 
-- 설계 이미지 추가
-- UI 에서 어떤 부분이 각 클래스 컴포넌트를 담당하는지 매칭시키는 이미지 추가
+  <img width="927" alt="캐러셀 클래스 구분" src="https://user-images.githubusercontent.com/18614517/64918221-532de280-d7d6-11e9-8e53-33b94fd01529.png">
 
-  - **Carousel:** Controller에게 받은 데이터로 초기화. 사용자가 좌-우 버튼을 클릭하면 Controller에게 알림
+* **Carousel:** Controller에게 받은 데이터로 초기화. 사용자가 좌-우 버튼을 클릭하면 Controller에게 알림
 
-  - **Pagination:** Controller에게 받은 데이터로 초기화. 사용자가 페이지네이션을 클릭하면 Controller에게 알림
+* **Pagination:** Controller에게 받은 데이터로 초기화. 사용자가 페이지네이션을 클릭하면 Controller에게 알림
 
-  - **Controller:** Carousel에서 보여줄 컨텐츠와 Pagination에서 scale up 할 인덱스를 동기화 시키기 위한 모든 정보(속성, 함수) 관리
+* **Controller:** Carousel에서 보여줄 컨텐츠와 Pagination에서 scale up 할 인덱스를 동기화 시키기 위한 모든 정보(속성, 함수) 관리
 
-    - Carousel과 Pagination에게 새로운 사용자 입력이 발생했다는 알림을 받으면 Controller는 다시 두 클래스에게 업데이트된 정보 전달
+  - Carousel과 Pagination에게 새로운 사용자 입력이 발생했다는 알림을 받으면 Controller는 다시 두 클래스에게 업데이트된 정보 전달
 
-* [관련된 구현 로직](https://leehwarang.github.io/) // 작성중
+  <img width="753" alt="캐러셀 클래스 설계" src="https://user-images.githubusercontent.com/18614517/64918223-60e36800-d7d6-11e9-8e8e-b62045ff911e.png">
 
 ### 1-3. 구현시 가장 고민했던 부분
 
 - Caroseul와 Pagination의 의존 관계를 낮추기 위한 방법
 
-  - 두 클래스는 자신의 변경되면 항상 상대 클래스의 상태 변경을 필요로 한다. 초기 설계시에는 서로의 의존성을 주입하여 구현 하였는데, ~이러한 상황에서 ~이러한 문제점들이 발생하는 것이 예상 되었다.
+  - 두 클래스는 자신의 변경되면 항상 상대 클래스의 상태 변경을 필요로 한다. 초기 설계시에는 서로의 의존성을 주입하여 구현 하였는데 변경 사항에 대한 유연함과 확장성이 떨어진다고 생각했다.
 
   - 따라서 **_1-2._** 에서 설명한 것 처럼 두 클래스의 상태를 관리하는 Controller 클래스를 생성하였고, Carousel과 Pagination은 Controller에게 전달 받은 상태 정보에 의해서만 렌더링 되도록 재설계 하였다.
 
@@ -75,22 +74,21 @@
 
 ### 2-2. 설계 및 구현
 
-- 설계 이미지 추가
-- UI 에서 어떤 부분이 각 클래스 컴포넌트를 담당하는지 매칭시키는 이미지 추가
-
 - 각 역할별로 클래스(모듈) 분리
 
-  - **searchView:** 사용자 입력을 받으면 Controller에게 알림. autoCompleView 또는 recentSearchView에서 선택한 검색어를 입력창에서 보여줌
+<img width="947" alt="검색 자동 완성 클래스 구분" src="https://user-images.githubusercontent.com/18614517/64918369-54f8a580-d7d8-11e9-9472-a452b4515708.png">
 
-  - **autoCompleteView:** searchView에서 입력 받은 검색어에 해당하는 자동 완성 데이터가 있을 시 보여줌
+- **SearchView:** 사용자 입력을 받으면 Controller에게 알림. autoCompleView 또는 recentSearchView에서 선택한 검색어를 입력창에서 보여줌
 
-  - **recentSearchView:** searchView에서 검색 버튼을 클릭했을 시에 저장되는 최근 검색어 데이터 관리. searchView를 클릭했을 때 보여짐
+- **AutoCompleteView:** searchView에서 입력 받은 검색어에 해당하는 자동 완성 데이터가 있을 시 보여줌
 
-  - **ModalView:** autoCompleteView와 ModalView의 공통 로직을 정의하여, 두 클래스가 상속 받아 사용하도록 함
+- **RecentSearchView:** searchView에서 검색 버튼을 클릭했을 시에 저장되는 최근 검색어 데이터 관리. searchView를 클릭했을 때 보여짐
 
-  - **Controller:** 여러 가지 이벤트(focus, blur, enter, click...)가 발생했을 때, 각 View가 알맞은 상태를 가지도록 하는 모든 정보(속성, 함수) 관리
+- **ModalView:** autoCompleteView와 ModalView의 공통 로직을 정의하여, 두 클래스가 상속 받아 사용하도록 함
 
-* [관련된 구현 로직](https://leehwarang.github.io/) // 작성중
+- **Controller:** 여러 가지 이벤트(focus, blur, enter, click...)가 발생했을 때, 각 View가 알맞은 상태를 가지도록 하는 모든 정보(속성, 함수) 관리
+
+<img width="1005" alt="검색 자동 완성 클래스 설계" src="https://user-images.githubusercontent.com/18614517/64918498-eae10000-d7d9-11e9-8117-bf76941ee17f.png">
 
 ### 2-3. 구현시 가장 고민했던 부분
 
@@ -122,4 +120,4 @@
 
   - Controller가 View들의 상태를 관리하는 설계 방식이 리액트에서 상위 컴포넌트가 하위 컴포넌트의 상태를 관리하는 것과 유사하다고 느꼈다. 따라서 상위 컴포넌트의 상태가 변경될 때마다 하위 컴포넌트가 렌더링 되는 맥락을 쉽게 이해할 수 있었다.
 
-- UI를 기준으로 클래스를 직접 분리하고 설계 해보는 과정이 후에 리액트에서 컴포넌트를 쪼개는데 도움을 받고 있다.
+  - UI를 기준으로 클래스를 직접 분리하고 설계 해보는 과정이 후에 리액트에서 컴포넌트를 쪼개는데 도움을 받고 있다.
