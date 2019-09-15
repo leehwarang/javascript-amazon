@@ -6,14 +6,17 @@
 
 - [데모 링크](https://michelle-amazon.herokuapp.com/)
 
-- 사용된 언어 및 프레임 워크: html, css, javascript, node.js, express
-- 서버 배포: heroku
+  - 검색 자동 완성 기능 테스트시 **b, i, j**로 시작하는 문자를 입력해주세요. 임의로 데이터를 만들었습니다.
+    (ex. bicycle, iphone, javascript ... )
+
+- **사용된 언어 및 프레임 워크**: html, css, javascript, node.js, express
+- **서버 배포**: heroku
 
 ---
 
 ## 1. 캐러셀 슬라이더 UI
 
-[![Amazon Clone - 캐러셀 슬라이더 UI](https://video-to-markdown.netlify.com/.netlify/functions/image?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DvKMQ-GYcL6Y)](https://www.youtube.com/watch?v=vKMQ-GYcL6Y "Amazon Clone - 캐러셀 슬라이더 UI")
+![캐러셀 슬라이더 UI](https://media.giphy.com/media/cjEgDiwmU7X6SBeuLv/giphy.gif)
 
 ### 1-1. 기능
 
@@ -56,7 +59,7 @@
 
 ## 2. 검색 자동 완성 기능
 
-[![Amazon Clone - 검색 자동 완성](https://video-to-markdown.netlify.com/.netlify/functions/image?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DIhJ-2Nh23vI)](https://www.youtube.com/watch?v=IhJ-2Nh23vI "Amazon Clone - 검색 자동 완성")
+![검색 자동 완성](https://media.giphy.com/media/Y48jIgUr2aSyJ8MUzR/giphy.gif)
 
 ### 2-1. 기능
 
