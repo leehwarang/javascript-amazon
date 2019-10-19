@@ -1,0 +1,35 @@
+{
+  "statusCode": 200,
+  "body": {
+    "alias": "aps",
+    "prefix": "a",
+    "suffix": null,
+    "suggestions": [
+      {
+        "suggType": "KeywordSuggestion",
+        "type": "KEYWORD",
+        "value": "apple",
+        "refTag": "nb_sb_ss_c_1_1",
+        "scopes": [
+          {
+            "type": "ALIAS",
+            "value": "electronics",
+            "display": "Electronics"
+          }
+        ],
+        "ghost": false,
+        "help": false,
+        "queryUnderstandingFeatures": [
+          {
+            "source": "QU_TOOL",
+            "annotations": []
+          }
+        ],
+        "spellCorrected": false,
+        "fallback": false,
+        "blackListed": false,
+        "xcatOnly": false
+      }
+    ]
+  }
+}
